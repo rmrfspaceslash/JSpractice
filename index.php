@@ -24,6 +24,9 @@
     while ($row = $result->fetch_assoc()) {
       if ($username === $row['username'] && password_verify($password, $row['password'])) {
         $_SESSION['loggedin'] = true;
+        $_SESSION['fail'] = "";
+      }else {
+        $_SESSION['fail'] = true;
       }
     }
 
@@ -46,7 +49,7 @@
         <form action="" method="post">
           <div class="top">
             <h1>Noah's Website</h1>
-            <?php if ($_SESSION['loggedin'] != true){echo "<h5>Please enter a valid username and password</h5>";}?>
+            <?php if ($_SESSION['fail'] === true){echo "<h5>Please enter a valid username and password</h5>";}?>
             <input class="textbox" type="text" name="username" placeholder="username*"/><br />
             <input class="textbox" type="password" name="password" placeholder="password*"/><br />
           </div>
