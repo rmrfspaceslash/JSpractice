@@ -25,6 +25,7 @@ body {
 .textbox{
   padding-bottom: 5px;
   padding-top: 5px;
+  padding-left: 4px;
   font-size: 18px;
   text-align: left;
   outline: 1;
