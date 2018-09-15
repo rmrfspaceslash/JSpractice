@@ -24,9 +24,11 @@
     while ($row = $result->fetch_assoc()) {
       if ($username === $row['username'] && password_verify($password, $row['password'])) {
         $_SESSION['loggedin'] = true;
-      }else {
-        echo "<h1>Please try again</h1>";
       }
+    }
+
+    if ($_SESSION['loggedin'] != true) {
+      echo "Please enter a valid username and password to continue";
     }
 
     if ($_SESSION['loggedin'] === true) {
