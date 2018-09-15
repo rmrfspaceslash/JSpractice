@@ -1,3 +1,40 @@
+<?php
+
+  //require database connection before continue
+  require('dbconnect.php');
+  require('index.js');
+
+  //start session if need to
+  if (!isset($_SESSION)) {
+    session_start();
+  }
+
+  //Match username and password to database
+  if (isset($_POST['username']) && isset($_POST['password'])) {
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+
+    //create query for username and password match
+    $sql = "SELECT username, password FROM users WHERE username = '$username'";
+
+    //get results from query
+    $result = $conn->query($sql);
+
+    //extract results from query and set login variable if succeed else error
+    while ($row = $result->fetch_assoc()) {
+      if ($username === $row['username'] && password_verify($password, $row['password'])) {
+        $_SESSION['loggedin'] = true;
+      }else {
+        
+      }
+    }
+
+    if ($_SESSION['loggedin'] === true) {
+      header('Location: home.php');
+    }
+  }
+
+?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <link rel="stylesheet" href="style.css" />

@@ -51,6 +51,14 @@ body {
   box-sizing: border-box;
 }
 
+.buttons:hover{
+  background: #43A047;
+}
+
 .top{
   margin-bottom: 30px;
+}
+
+.form{
+  background: rgba(7, 40, 195, 0.8);
 }
