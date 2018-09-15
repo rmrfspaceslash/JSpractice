@@ -6,8 +6,9 @@ body {
   position: center;
   padding: inherit;
   margin-top: 200px;
+  background-color: red;
 }
-  
+
 .login {
   position: relative;
   margin: auto;
