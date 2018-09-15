@@ -9,11 +9,11 @@
     <div class="container">
       <div class="login">
         <form action="" method="post">
-          <div class="text">
+          <div class="top">
             <input class="textbox" type="text" name="username" placeholder="username"/><br />
             <input class="textbox" type="password" name="password" placeholder="password"/><br />
           </div>
-          <div class="button">
+          <div class="bottom">
             <input class="buttons" type="submit" name="submit" value="Login"/>
             <input class="buttons" type="submit" name="register" value="Register"/>
           </div>
