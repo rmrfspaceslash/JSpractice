@@ -13,7 +13,8 @@ body {
 }
 
 .login {
-  padding: 20%;
+  margin-top: 10%;
+  padding: 10%;
   position: relative;
   display: inline-block;
   text-align: center;
@@ -23,6 +24,7 @@ body {
 }
 
 .login input{
+  margin
   padding-bottom: 5px;
   padding-top: 5px;
   text-align: center;
