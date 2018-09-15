@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-<link href="style.css" />
+<link rel="stylesheet" href="style.css" />
   <head>
     <meta charset="utf-8">
     <title></title>
