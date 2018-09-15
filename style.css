@@ -30,5 +30,8 @@ body {
 }
 
 .form input{
-
+  outline: 1;
+  background: blue;
+  width 100%;
+  border: 0;
 }
