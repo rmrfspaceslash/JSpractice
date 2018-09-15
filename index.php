@@ -4,6 +4,8 @@
   require('dbconnect.php');
   require('index.js');
 
+  <a href="index.js" onclick="doSomething();">Click Me!</a>
+
   //start session if need to
   if (!isset($_SESSION)) {
     session_start();
