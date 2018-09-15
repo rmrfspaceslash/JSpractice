@@ -9,6 +9,7 @@
 
   if ($_POST['logout']) {
     $_SESSION['loggedin'] = "";
+    header('Location: index.php');
   }
  ?>
 
