@@ -14,7 +14,7 @@ body {
 .login {
   padding-top: 100px;
   position: relative;
-  margin: auto;
+  margin: auto auto;
   text-align: center;
   background-color: blue;
   width: 300px;
