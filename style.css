@@ -9,6 +9,7 @@ body {
   position: center;
   margin: auto;
   background-color: red;
+  text-align: center;
 }
 
 .login {
