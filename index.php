@@ -46,7 +46,7 @@
         <form action="" method="post">
           <div class="top">
             <h1>Noah's Website</h1>
-            <?php if ($_SESSION['loggedin'] != true){echo "<h2>Please enter a valid username and password</h2>";}?>
+            <?php if ($_SESSION['loggedin'] != true){echo "<h4>Please enter a valid username and password</h4>";}?>
             <input class="textbox" type="text" name="username" placeholder="username*"/><br />
             <input class="textbox" type="password" name="password" placeholder="password*"/><br />
           </div>
