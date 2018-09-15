@@ -9,8 +9,8 @@
     <div class="container">
       <div class="login">
         <form action="" method="post">
-          <input type="text" name="username" placeholder="username"/><br />
-          <input type="password" name="password" placeholder="password"/><br />
+          <input class="textbox" type="text" name="username" placeholder="username"/><br />
+          <input class="textbox" type="password" name="password" placeholder="password"/><br />
           <input class="buttons" type="submit" name="submit" value="Login"/>
           <input class="buttons" type="submit" name="register" value="Register"/>
         </form>
