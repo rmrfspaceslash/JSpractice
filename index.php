@@ -25,7 +25,7 @@
       if ($username === $row['username'] && password_verify($password, $row['password'])) {
         $_SESSION['loggedin'] = true;
       }else {
-        
+        echo "<script>alert("Hello");</script>"; 
       }
     }
 
