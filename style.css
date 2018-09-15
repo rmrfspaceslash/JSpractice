@@ -53,12 +53,3 @@ body {
 .top{
   margin-bottom: 35px;
 }
-
-.clickdform input[class="buttons"]:hover,
-.clickdform textarea:hover,
-.clickdform select:hover
-{
-  border-color: green;
-  border-style: solid;
-  border-width: 2px;
-}
