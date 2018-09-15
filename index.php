@@ -11,8 +11,8 @@
         <form action="" method="post">
           <div class="top">
             <h1>Noah's Website</h1>
-            <input class="textbox" type="text" name="username" placeholder="username"/><br />
-            <input class="textbox" type="password" name="password" placeholder="password"/><br />
+            <input class="textbox" type="text" name="username" placeholder="username*"/><br />
+            <input class="textbox" type="password" name="password" placeholder="password*"/><br />
           </div>
           <div class="bottom">
             <input class="buttons" type="submit" name="submit" value="Login"/>
