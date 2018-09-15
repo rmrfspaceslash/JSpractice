@@ -10,8 +10,8 @@ body {
 }
 
 .login input{
-  padding-bottom: 10px;
+  padding-bottom: 5px;
+  padding-top: 5px;
   text-align: center;
-  font-size: 12px;
   margin-bottom: 15px;
 }
