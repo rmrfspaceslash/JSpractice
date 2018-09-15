@@ -25,6 +25,7 @@ body {
 .textbox{
   padding-bottom: 5px;
   padding-top: 5px;
+  font-size: 18px;
   text-align: center;
   outline: 1;
   background: #cccccc;
@@ -39,7 +40,7 @@ body {
   padding-bottom: 5px;
   padding-top: 5px;
   text-align: center;
-  font-size: 12px;
+  font-size: 18px;
   color: #cccccc;
   outline: 1;
   background: green;
