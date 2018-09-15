@@ -6,11 +6,13 @@
 
   if ($_SESSION['loggedin'] != true) {
     header('Location: index.php');
+    session_destroy();
   }
 
   if ($_POST['logout']) {
     $_SESSION['loggedin'] = "";
     header('Location: index.php');
+    session_destroy();
   }
  ?>
 
