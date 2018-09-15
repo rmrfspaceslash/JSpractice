@@ -8,8 +8,8 @@
   <body>
         <div class="login">
           <form action="" method="post">
-            <input type="text" name="username" placeholder="username"/>
-            <input type="password" name="password" placeholder="password"/>
+            <input type="text" name="username" placeholder="username"/> <br />
+            <input type="password" name="password" placeholder="password"/> <br />
             <input type="submit" name="submit" />
           </form>
         </div>
