@@ -51,7 +51,7 @@
         <form action="" method="post">
           <div class="top">
             <h1>Noah's Website</h1>
-            <hr>
+            <hr></hr>
             <?php if ($_SESSION['fail'] === true){echo "<h5>Please enter a valid username and password</h5>";}?>
             <input class="textbox" type="text" name="username" placeholder="username*"/><br />
             <input class="textbox" type="password" name="password" placeholder="password*"/><br />
