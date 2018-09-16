@@ -1,20 +1,24 @@
 <?php
 
+  //start session
   if (!isset($_SESSION)) {
     session_start();
   }
 
+  //check user is logged in
   if ($_SESSION['loggedin'] != true) {
     header('Location: index.php');
     session_destroy();
   }
 
+  //control logout button
   if ($_POST['logout']) {
     $_SESSION['loggedin'] = "";
     header('Location: index.php');
     session_destroy();
   }
 
+  //if upload is triggered, store the file
   if (isset($_FILES['upload'])) {
     $target_dir = "uploads/";
     $target_file = $target_dir . basename($_FILES['upload']['name']);
@@ -22,12 +26,14 @@
     $uploadver = true;
   }
 
+  //check if the file is already submitted
   if (file_exists($target_file)) {
     $uploadver = false;
     echo "sorry, file already exists";
     $ret = true;
   }
 
+  //if file hasnt been uploaded, upload it
   if ($uploadver) {
     move_uploaded_file($_FILES['upload']['tmp_name'], $target_file);
   }
