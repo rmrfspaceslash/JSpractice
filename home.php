@@ -56,7 +56,7 @@
      <div class="container">
        <div class="login">
          <h1>Noah's Website</h1>
-         <form action="" method="post">
+         <form action="" method="post" enctype="multipart/form-data">
            <input class="textbox" type="file" name="upload"> <br />
            <input class="buttons" type="submit" name="store" value="Upload">
            <input class="buttons" type="submit" name="logout" value="Logout"/>
