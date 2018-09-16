@@ -1,7 +1,8 @@
-<script type="text/javascript" src="jquery.min.js"></script>
 <script type="text/javascript">
-function doSomething() {
-    $.get("index.php");
-    return false;
+
+function selectform (var java, var java2) {
+  $("form#'/java'/").removeClass("hidden");
+  $("form#'/java'/").addClass("hidden");
 }
+
 </script>
