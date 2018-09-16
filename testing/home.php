@@ -32,9 +32,9 @@
        <div class="menu">
          <h1>Noah's Website</h1>
          <form action="" method="post">
-           <input class="buttons" type="submit" name="upload">
-           <input class="buttons" type="submit" name="store" value="Upload">
-           <input class="buttons" type="submit" name="logout" value="Logout"/>
+           <input class="menubuttons" type="submit" name="upload">
+           <input class="menubuttons" type="submit" name="store" value="Upload">
+           <input class="menubuttons" type="submit" name="logout" value="Logout"/>
            <hr></hr>
          </form>
        </div>
