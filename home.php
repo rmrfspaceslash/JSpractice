@@ -30,7 +30,7 @@
   if (file_exists($target_file)) {
     $uploadver = false;
     $ret = true;
-    $output = "sorry, file already exists";
+    $output = "The file you are trying to upload already exists";
   }
 
   //if file hasnt been uploaded, upload it
