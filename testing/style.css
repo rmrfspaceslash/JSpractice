@@ -74,7 +74,7 @@ h5{
   display: none;
 }
 
-.container .menu{
+.menucontainer{
   width: 1366px;
   height: 768px;
   position: center;
@@ -91,4 +91,19 @@ h5{
   background-color: #ffffff;
   width: 100%;
   height: 25px;
+}
+
+.menu.buttons{
+  padding-bottom: 5px;
+  padding-top: 5px;
+  text-align: center;
+  font-size: 18px;
+  color: #cccccc;
+  outline: 1;
+  background: green;
+  width: 10%;
+  border: 0;
+  margin: 0 0 15px;
+  padding 15px;
+  box-sizing: border-box;
 }
