@@ -18,27 +18,6 @@
     session_destroy();
   }
 
-  //if upload is triggered, store the file
-  if ($_FILES['upload'] != null) {
-    $target_dir = "uploads/";
-    $target_file = $target_dir . basename($_FILES['upload']['name']);
-    echo $target_file;
-    $uploadver = true;
-  }
-
-  //check if the file is already submitted
-  if (file_exists($target_file)) {
-    $uploadver = false;
-    $ret = true;
-    $output = "The file you are trying to upload already exists";
-  }
-
-  //if file hasnt been uploaded, upload it
-  if ($uploadver) {
-    move_uploaded_file($_FILES['upload']['tmp_name'], $target_file);
-    $_FILES['upload'] = null;
-  }
-
   ?>
 
  <!DOCTYPE html>
@@ -50,13 +29,13 @@
    </head>
    <body>
      <div class="container">
-       <div class="login">
+       <div class="menu">
          <h1>Noah's Website</h1>
-         <form action="" method="post" enctype="multipart/form-data">
-           <input class="textbox" type="file" name="upload"> <br />
+         <form action="" method="post">
+           <input class="buttons" type="submit" name="upload">
            <input class="buttons" type="submit" name="store" value="Upload">
            <input class="buttons" type="submit" name="logout" value="Logout"/>
-           <h5><?php if ($ret) {echo $output; } ?></h5>
+           <hr></hr>
          </form>
        </div>
     </div>
