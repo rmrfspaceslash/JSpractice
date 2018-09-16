@@ -44,18 +44,11 @@
   <head>
     <meta charset="utf-8">
     <title>login</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   </head>
   <body>
-
-    <%
-      string javahidereg = "\'javahidereg\'"
-      string javehide = "\'javehide\'"
-    %>
-
     <div class="container">
-      <div class="login" id="javahide">
-        <form action="" method="post" name="login">
+      <div class="login">
+        <form action="" method="post">
           <div class="top">
             <h1>Noah's Website</h1>
             <?php if ($_SESSION['fail'] === true){echo "<h5>Please enter a valid username and password</h5>";}?>
@@ -64,22 +57,8 @@
           </div>
           <div class="bottom">
             <input class="buttons" type="submit" name="submit" value="Login"/>
-            <input class="buttons" type="button" name="register" value="Register" onclick="selectform("'<%=javahidereg %>','<%=javahide %>'")"/>
-          </div>
-        </form>
-      </div>
-
-      <div class="register hidden" id="javahidereg">
-        <form action="" method="post" name="login">
-          <div class="top">
-            <h1>Noah's Website</h1>
-            <?php if ($_SESSION['fail'] === true){echo "<h5>Please enter a valid username and password</h5>";}?>
-            <input class="textbox" type="text" name="username" placeholder="username*"/><br />
-            <input class="textbox" type="password" name="password" placeholder="password*"/><br />
-          </div>
-          <div class="bottom">
-            <input class="buttons" type="submit" name="submit" value="Create Account"/>
-            <input class="button" type="submit" name="Login" value="Login" onclick="selectform("'<%=javahide %>','<%=javahidereg %>'")"/>
+            <input class="buttons" type="submit" name="register" value="Register"/>
+              <a href="index.js" onclick="doSomething();">Click Me!</a>
           </div>
         </form>
       </div>
