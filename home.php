@@ -48,6 +48,7 @@
    <body>
      <div class="container">
        <div class="login">
+         <h1>Noah's Website</h1>
          <form action="" method="post">
            <input class="textbox" type="file" name="upload"> <br />
            <input class="buttons" type="submit" name="store" value="upload">
