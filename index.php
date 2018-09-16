@@ -58,7 +58,6 @@
           <div class="bottom">
             <input class="buttons" type="submit" name="submit" value="Login"/>
             <input class="buttons" type="submit" name="register" value="Register"/>
-              <a href="index.js" onclick="doSomething();">Click Me!</a>
           </div>
         </form>
       </div>
