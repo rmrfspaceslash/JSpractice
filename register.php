@@ -44,7 +44,7 @@
           </div>
           <div class="bottom">
             <input class="buttons" type="submit" name="submit" value="Create Account"/>
-            Already have an account? <a href="index.php">Login</a>
+            Already have an account? <a href="index.php">Log in</a>
           </div>
         </form>
       </div>
