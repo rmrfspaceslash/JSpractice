@@ -49,7 +49,7 @@
      <div class="container">
        <div class="login">
          <form action="" method="post">
-           <input class="buttons" type="file" name="upload"> <br />
+           <input class="textbox" type="file" name="upload"> <br />
            <input class="buttons" type="submit" name="store" value="upload">
            <input class="buttons" type="submit" name="logout" value="Logout"/>
          </form>
