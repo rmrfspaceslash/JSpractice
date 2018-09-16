@@ -2,7 +2,6 @@
 
   //require database connection before continue
   require('dbconnect.php');
-  require('index.js');
 
 
 
