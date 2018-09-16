@@ -30,7 +30,7 @@
   if (file_exists($target_file)) {
     $uploadver = false;
     $ret = true;
-    $output = echo "sorry, file already exists";
+    $output = "sorry, file already exists";
   }
 
   //if file hasnt been uploaded, upload it
@@ -56,7 +56,7 @@
            <input class="textbox" type="file" name="upload"> <br />
            <input class="buttons" type="submit" name="store" value="Upload">
            <input class="buttons" type="submit" name="logout" value="Logout"/>
-           <h5 style="color:red;"><?php if ($ret) {echo $output; } ?></h5>
+           <h5><?php if ($ret) {echo $output; } ?></h5>
          </form>
        </div>
     </div>
