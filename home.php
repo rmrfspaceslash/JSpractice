@@ -33,7 +33,7 @@
   }
 
   ?>
-  
+
   <h5 style="color:red;">
     <?php if ($ret) {echo $ret; } ?>
   </h5>
@@ -49,20 +49,11 @@
      <div class="container">
        <div class="login">
          <form action="" method="post">
-           <input type="file" name="upload"> <br />
-           <input type="submit" name="store" value="upload">
-           <input type="submit" name="logout" value="Logout"/>
+           <input class="buttons" type="file" name="upload"> <br />
+           <input class="buttons" type="submit" name="store" value="upload">
+           <input class="buttons" type="submit" name="logout" value="Logout"/>
          </form>
        </div>
     </div>
    </body>
  </html>
-
-
-
- Upload your file.
- <form action="" method="post" enctype="multipart/form-data">
-   <input type="file" name="upload">
-   <br />
-   <input type="submit" name="Submit">
- </form>
