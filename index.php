@@ -58,6 +58,7 @@
           <div class="bottom">
             <input class="buttons" type="submit" name="submit" value="Login"/>
             <input class="buttons" type="submit" name="register" value="Register"/>
+            Need an account? <a href="register.php">Register Now</a>
           </div>
         </form>
       </div>
