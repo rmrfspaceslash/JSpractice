@@ -29,21 +29,17 @@
   //check if the file is already submitted
   if (file_exists($target_file)) {
     $uploadver = false;
-    echo "sorry, file already exists";
     $ret = true;
+    $output = echo "sorry, file already exists";
   }
 
   //if file hasnt been uploaded, upload it
   if ($uploadver) {
     move_uploaded_file($_FILES['upload']['tmp_name'], $target_file);
-    //$_FILES['upload'] = null;
+    $_FILES['upload'] = null;
   }
 
   ?>
-
-  <h5 style="color:red;">
-    <?php if ($ret) {echo $ret; } ?>
-  </h5>
 
  <!DOCTYPE html>
  <html lang="en" dir="ltr">
@@ -60,6 +56,7 @@
            <input class="textbox" type="file" name="upload"> <br />
            <input class="buttons" type="submit" name="store" value="Upload">
            <input class="buttons" type="submit" name="logout" value="Logout"/>
+           <h5 style="color:red;"><?php if ($ret) {echo $output; } ?></h5>
          </form>
        </div>
     </div>
