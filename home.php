@@ -19,10 +19,10 @@
   }
 
   //if upload is triggered, store the file
-  if (isset($_FILES['upload'])) {
+  if ($_FILES['upload'] != null) {
     $target_dir = "uploads/";
     $target_file = $target_dir . basename($_FILES['upload']['name']);
-    //echo $target_file;
+    echo $target_file;
     $uploadver = true;
   }
 
@@ -36,6 +36,7 @@
   //if file hasnt been uploaded, upload it
   if ($uploadver) {
     move_uploaded_file($_FILES['upload']['tmp_name'], $target_file);
+    $_FILES['upload'] = null;
   }
 
   ?>
@@ -57,7 +58,7 @@
          <h1>Noah's Website</h1>
          <form action="" method="post">
            <input class="textbox" type="file" name="upload"> <br />
-           <input class="buttons" type="submit" name="store" value="upload">
+           <input class="buttons" type="submit" name="store" value="Upload">
            <input class="buttons" type="submit" name="logout" value="Logout"/>
          </form>
        </div>
