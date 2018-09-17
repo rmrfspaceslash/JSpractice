@@ -33,11 +33,22 @@
     $output = "The file you are trying to upload already exists";
   }
 
+  //If file is too large
+  if ($_FILES['upload']['size'] > 1000000) {
+    echo "Sorry, file is too large";
+    $uploadver = false;
+  }
+
+  $finfo = finfo_open(FILENAMEO_MIME_TYPES);
+  $file_type = finfo_file($finfo, $_FILES['upload']['tmp_file']);
+  
+
   //if file hasnt been uploaded, upload it
   if ($uploadver) {
     move_uploaded_file($_FILES['upload']['tmp_name'], $target_file);
     $_FILES['upload'] = null;
   }
+
 
   ?>
 
@@ -53,7 +64,7 @@
        <div class="login">
          <h1>Noah's Website</h1>
          <form action="" method="post" enctype="multipart/form-data">
-           <input class="textbox" type="file" name="upload" value="Select File"> <br />
+           <input class="textbox" type="file" name="upload"> <br />
            <input class="buttons" type="submit" name="store" value="Upload">
            <input class="buttons" type="submit" name="logout" value="Logout"/>
            <h5><?php if ($ret) {echo $output; } ?></h5>
