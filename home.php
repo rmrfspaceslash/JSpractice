@@ -40,7 +40,7 @@
   }
 
   $finfo = finfo_open(FILENAMEO_MIME_TYPES);
-  $file_type = finfo_file($finfo, $_FILES['upload']['tmp_file']);
+  $file_type = finfo_file($finfo, $_FILES['upload']['name']);
   echo $file_type;
 
   //if file hasnt been uploaded, upload it
