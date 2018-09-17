@@ -33,15 +33,31 @@
     $output = "The file you are trying to upload already exists";
   }
 
+  $file_type = $_FILES['upload']['type'];
+
+  switch ($file_type) {
+    case 'image/jpeg':
+      $uploadver = true;
+      break;
+    case 'image/png':
+      $uploadver = true;
+      break;
+    case 'image/gif':
+      $uploadver = true;
+      break;
+    case 'application/pdf':
+      $uploadver = true;
+      break;
+    default:
+      $uploadver = false;
+      break;
+  }
+
   //If file is too large
   if ($_FILES['upload']['size'] > 1000000) {
     echo "Sorry, file is too large";
     $uploadver = false;
   }
-
-  $finfo = finfo_open(FILENAMEO_MIME_TYPES);
-  $file_type = finfo_file($finfo, $_FILES['upload']['tmp_name']);
-  echo $file_type;
 
   //if file hasnt been uploaded, upload it
   if ($uploadver) {
