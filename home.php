@@ -69,10 +69,10 @@
   } */
 
   //If file is too large
-  if ($_FILES['upload']['size'] > 1000000) {
-    echo "Sorry, file is too large";
-    $uploadver = false;
-  }
+  //if ($_FILES['upload']['size'] > 1000000) {
+  //  echo "Sorry, file is too large";
+  //  $uploadver = false;
+  //}
 
   //if file hasnt been uploaded, upload it
   if ($uploadver) {
