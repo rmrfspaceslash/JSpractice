@@ -34,8 +34,6 @@
       chmod($target_dir, 0777);
     }
 
-
-
   }
 
   //check if the file is already submitted
@@ -46,41 +44,38 @@
   }
 
   //get the uploaded file type
-  $file_type = $_FILES['upload']['type'];
+//  $file_type = $_FILES['upload']['type'];
 
   //switch statement for the correct file types
-  switch ($file_type) {
-    case 'image/jpeg':
-      $uploadver = true;
-      break;
-    case 'image/png':
-      $uploadver = true;
-      break;
-    case 'image/gif':
-      $uploadver = true;
-      break;
-    case 'application/pdf':
-      $uploadver = true;
-      break;
-    default:
-      $uploadver = false;
-      echo "This file type is not supported. Sorry.";
-      break;
-  }
+//    case 'image/jpeg':
+//      $uploadver = true;
+//      break;
+//    case 'image/png':
+//      $uploadver = true;
+//      break;
+//    case 'image/gif':
+//      $uploadver = true;
+//      break;
+//    case 'application/pdf':
+//      $uploadver = true;
+//      break;
+//    default:
+//      $uploadver = false;
+//      echo "This file type is not supported. Sorry.";
+//      break;
+//  }
 
   //If file is too large
-  if ($_FILES['upload']['size'] > 1000000) {
-    echo "Sorry, file is too large";
-    $uploadver = false;
-  }
+  //if ($_FILES['upload']['size'] > 1000000) {
+  //  echo "Sorry, file is too large";
+  //  $uploadver = false;
+  //}
 
   //if file hasnt been uploaded, upload it
   if ($uploadver) {
     move_uploaded_file($_FILES['upload']['tmp_name'], $target_file);
     $_FILES['upload'] = null;
   }
-
-
   ?>
 
  <!DOCTYPE html>
