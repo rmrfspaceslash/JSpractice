@@ -22,7 +22,7 @@
   if ($_FILES['upload'] != null) {
 
     echo "HELOO HELOO";
-    $target_dir = $_SESSION['username'];
+    $target_dir = "uploads/".$_SESSION['username'];
     echo "$target_dir";
     echo $_SESSION['username'];
 
