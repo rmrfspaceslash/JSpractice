@@ -26,6 +26,7 @@
     while ($row = $result->fetch_assoc()) {
       if ($username === $row['username'] && password_verify($password, $row['password'])) {
         $_SESSION['loggedin'] = true;
+        $_SESSION['username'] = $username;
         $_SESSION['fail'] = null;
       }else {
         $_SESSION['fail'] = true;

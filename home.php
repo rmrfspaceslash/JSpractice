@@ -18,12 +18,24 @@
     session_destroy();
   }
 
+  $target_dir = "$_SESSION['username']/";
+
   //if upload is triggered, store the file
   if ($_FILES['upload'] != null) {
-    $target_dir = "uploads/";
-    $target_file = $target_dir . basename($_FILES['upload']['name']);
-    echo $target_file;
-    $uploadver = true;
+
+    //check to see if directory exists
+    if (file_exists($target_dir)) {
+      $target_file = $target_dir . basename($_FILES['upload']['name']);
+      echo $target_file;
+      $uploadver = true;
+    }else {
+      //if uploads directory does not exist, create it
+      mkdir($target_file, 0777, true);
+      chmod($target_file, 0777);
+    }
+
+
+
   }
 
   //check if the file is already submitted
