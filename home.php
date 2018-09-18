@@ -75,6 +75,7 @@
   if ($uploadver) {
     move_uploaded_file($_FILES['upload']['tmp_name'], $target_file);
     $_FILES['upload'] = null;
+    $uploadver = false;
   }
   ?>
 
