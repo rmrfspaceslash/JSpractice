@@ -29,7 +29,7 @@
     //check to see if directory exists
     if (file_exists($target_dir)) {
       $target_file = $target_dir . basename($_FILES['upload']['name']);
-      echo $target_file;
+      //echo $target_file;
       $uploadver = true;
     }else {
       //if uploads directory does not exist, create it
