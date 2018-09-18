@@ -47,32 +47,32 @@
   }
 
   //get the uploaded file type
-//  $file_type = $_FILES['upload']['type'];
+  $file_type = $_FILES['upload']['type'];
 
   //switch statement for the correct file types
-//    case 'image/jpeg':
-//      $uploadver = true;
-//      break;
-//    case 'image/png':
-//      $uploadver = true;
-//      break;
-//    case 'image/gif':
-//      $uploadver = true;
-//      break;
-//    case 'application/pdf':
-//      $uploadver = true;
-//      break;
-//    default:
-//      $uploadver = false;
-//      echo "This file type is not supported. Sorry.";
-//      break;
-//  }
+    case 'image/jpeg':
+      $uploadver = true;
+      break;
+    case 'image/png':
+      $uploadver = true;
+      break;
+    case 'image/gif':
+      $uploadver = true;
+      break;
+    case 'application/pdf':
+      $uploadver = true;
+      break;
+    default:
+      $uploadver = false;
+      echo "This file type is not supported. Sorry.";
+      break;
+  }
 
   //If file is too large
-  //if ($_FILES['upload']['size'] > 1000000) {
-  //  echo "Sorry, file is too large";
-  //  $uploadver = false;
-  //}
+  if ($_FILES['upload']['size'] > 1000000) {
+    echo "Sorry, file is too large";
+    $uploadver = false;
+  }
 
   //if file hasnt been uploaded, upload it
   if ($uploadver) {
