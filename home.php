@@ -18,7 +18,7 @@
     session_destroy();
   }
 
-  $target_dir = "$_SESSION['username']/";
+  $target_dir = $_SESSION['username'];
 
   //if upload is triggered, store the file
   if ($_FILES['upload'] != null) {
@@ -30,8 +30,8 @@
       $uploadver = true;
     }else {
       //if uploads directory does not exist, create it
-      mkdir($target_file, 0777, true);
-      chmod($target_file, 0777);
+      mkdir($target_dir, 0777, true);
+      chmod($target_dir, 0777);
     }
 
 
