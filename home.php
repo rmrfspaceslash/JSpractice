@@ -33,8 +33,10 @@
     $output = "The file you are trying to upload already exists";
   }
 
+  //get the uploaded file type
   $file_type = $_FILES['upload']['type'];
 
+  //switch statement for the correct file types
   switch ($file_type) {
     case 'image/jpeg':
       $uploadver = true;
@@ -50,6 +52,7 @@
       break;
     default:
       $uploadver = false;
+      echo "This file type is not supported. Sorry.";
       break;
   }
 
