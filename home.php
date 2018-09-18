@@ -22,8 +22,8 @@
   if ($_FILES['upload'] != null) {
 
     echo "HELOO HELOO";
-    $target_dir = $_SESSION['username'];
-    echo "$target_dir" . "helloooooooooooooo";
+    $target_dir = "noah/";
+    echo "$target_dir";
     echo $_SESSION['username'];
 
     //check to see if directory exists
