@@ -24,7 +24,7 @@
     echo "HELOO HELOO";
     $target_dir = $_SESSION['username'];
     echo "$target_dir" . "helloooooooooooooo";
-
+    echo $_SESSION['username'];
 
     //check to see if directory exists
     if (file_exists($target_dir)) {
