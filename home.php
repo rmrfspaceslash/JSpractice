@@ -50,7 +50,7 @@
   $file_type = $_FILES['upload']['type'];
 
   //switch statement for the correct file types
-    case 'image/jpeg':
+/*    case 'image/jpeg':
       $uploadver = true;
       break;
     case 'image/png':
@@ -66,7 +66,7 @@
       $uploadver = false;
       echo "This file type is not supported. Sorry.";
       break;
-  }
+  } */
 
   //If file is too large
   if ($_FILES['upload']['size'] > 1000000) {
