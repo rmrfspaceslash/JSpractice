@@ -19,10 +19,12 @@
   }
 
   $target_dir = $_SESSION['username'];
+  echo "$target_dir";
 
   //if upload is triggered, store the file
   if ($_FILES['upload'] != null) {
 
+    echo "HELOO HELOO";
     //check to see if directory exists
     if (file_exists($target_dir)) {
       $target_file = $target_dir . basename($_FILES['upload']['name']);
