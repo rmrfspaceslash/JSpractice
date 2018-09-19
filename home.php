@@ -100,6 +100,8 @@
          <form action="" method="post" enctype="multipart/form-data">
            <input class="textbox" type="file" name="upload"> <br />
            <input class="buttons" type="submit" name="upload" value="Upload">
+           <input class="buttons" type="submit" name="users" value="Users">
+           <?php if ($_POST['users'] != null) {header("Location: users.php"); }?>
            <input class="buttons" type="submit" name="logout" value="Logout"/>
            <h5><?php if ($ret) {echo $output; } ?></h5>
          </form>
