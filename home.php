@@ -26,6 +26,9 @@
     echo "$target_dir";
     //echo $_SESSION['username'];
 
+    if (!file_exists("uploads")) {
+      mkdir("./uploads");
+    }
     //check to see if directory exists
     if (file_exists($target_dir)) {
       $target_file = $target_dir . basename($_FILES['upload']['name']);
