@@ -35,8 +35,8 @@ $conn->close();
    </head>
    <body>
      <div class="container">
-       <div class="login2">
-         <table>
+       <div>
+         <table class="table">
           <tr>
             <th>User ID</th>
             <th>username</th>
