@@ -73,3 +73,12 @@ h5{
 .hidden{
   display: none;
 }
+
+.table{
+  margin: 10%;
+  padding: 0% 2% 10% 2%;
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  background-color: #ffffff;
+}
