@@ -1,6 +1,7 @@
 <?php
 
 //echo "hello";
+//echo "test";
 //connect to database
 require('dbconnect.php');
 
