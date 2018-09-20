@@ -22,17 +22,6 @@ body {
   height: 200px;
 }
 
-.table{
-  margin: 10%;
-  padding: 0% 2% 10% 2%;
-  position: relative;
-  display: inline-block;
-  text-align: center;
-  background-color: #ffffff;
-  width: 400px;
-  height: 200px;
-}
-
 .textbox{
   padding-bottom: 5px;
   padding-top: 5px;
