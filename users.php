@@ -52,7 +52,7 @@ $conn->close();
       echo "<td>Delete</td>";
       echo "<td>
         <form action='' method='post'>
-        <input type='text'>
+        <input type='text' value='$row['userid']'>
         <input type='submit'>
         </form>
         </td>";
