@@ -35,12 +35,12 @@ $conn->close();
    </head>
    <body>
      <div class="container">
-       <div class="login">
-         <table>
+         <table class="table">
           <tr>
             <th>User ID</th>
             <th>username</th>
             <th>password hash</th>
+            <th>Actions</th>
           </tr>
 <?php
   //loop through all table records
@@ -49,11 +49,11 @@ $conn->close();
       echo "<td>".$row['userid']."</td>";
       echo "<td>".$row['username']."</td>";
       echo "<td>".$row['password']."</td>";
+      echo "delete"
     echo "</tr>";
   }
 ?>
         </table>
-      </div>
     </div>
    </body>
  </html>
