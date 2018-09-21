@@ -49,7 +49,7 @@ $conn->close();
       echo "<td>".$row['userid']."</td>";
       echo "<td>".$row['username']."</td>";
       echo "<td>".$row['password']."</td>";
-      echo "delete"
+      echo "delete";
     echo "</tr>";
   }
 ?>
