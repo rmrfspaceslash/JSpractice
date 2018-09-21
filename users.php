@@ -50,12 +50,12 @@ $conn->close();
       echo "<td>".$row['username']."</td>";
       echo "<td>".$row['password']."</td>";
       echo "<td>Delete</td>";
-      echo "
+      echo "<td>
         <form action="" method="post">
         <input type="text">
         <input type="submit">
         </form>
-        ";
+        </td>";
     echo "</tr>";
   }
 ?>
