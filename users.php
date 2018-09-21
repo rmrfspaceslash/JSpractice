@@ -35,7 +35,7 @@ $conn->close();
    </head>
    <body>
      <div class="container">
-         <table class="table">
+         <table class="table" bgcolor="#ffffff">
           <tr>
             <th>User ID</th>
             <th>username</th>
