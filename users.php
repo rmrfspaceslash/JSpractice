@@ -52,8 +52,8 @@ $conn->close();
       echo "<td>Delete</td>";
       echo "<td>
         <form action='' method='post'>
-        <input type='text' value='$row['userid']'>
-        <input type='submit'>
+        <input type='text' value=\"$row['userid']\">
+        <input type='submit' value='delete'>
         </form>
         </td>";
     echo "</tr>";
