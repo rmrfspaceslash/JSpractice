@@ -29,9 +29,9 @@ body {
   border-width: 5px;
 }
 
-table,th,td{
+table,th,td,tr{
   border-style: solid;
-  border-width: 1px;
+  border-width: 2px;
   border-color: black;
 }
 
