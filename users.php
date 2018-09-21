@@ -36,7 +36,7 @@ $conn->close();
    <body>
      <div class="container">
          <table class="table" bgcolor="#ffffff">
-          <tr>
+          <tr class="table">
             <th>User ID</th>
             <th>username</th>
             <th>password hash</th>
