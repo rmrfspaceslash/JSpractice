@@ -24,9 +24,10 @@ body {
 }
 
 .table {
+  position: center;
   align: center;
   border-style: solid;
-  border-width: 5px;
+  border-width: 2px;
 }
 
 table,th,td,tr{
