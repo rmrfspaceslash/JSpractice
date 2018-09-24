@@ -15,6 +15,10 @@ if (!isset($_SESSION['username'])) {
   header("Location: index.php");
 }
 
+if ($_POST['id'] != null && $_POST['kill'] != null) {
+  $sql = "DELETE FROM users WHERE userid = " . $_POST['userid'];
+}
+
 //create SQL query
 $sql = "SELECT * FROM users";
 
@@ -53,7 +57,7 @@ $conn->close();
       echo "<td>
         <form action='' method='post'>
         <input name='id' type='hidden' value='".$row['userid']."'>
-        <input type='submit' value='delete'>
+        <input type='submit' value='delete' name='kill'>
         </form>
         </td>";
     echo "</tr>";
