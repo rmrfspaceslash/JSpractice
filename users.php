@@ -17,6 +17,7 @@ if (!isset($_SESSION['username'])) {
 
 if ($_POST['id'] != null && $_POST['kill'] != null) {
   $sql = "DELETE FROM users WHERE userid = " . $_POST['userid'];
+  $result = $conn->query($sql);
 }
 
 //create SQL query
