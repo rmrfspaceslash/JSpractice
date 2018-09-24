@@ -10,6 +10,7 @@ body {
   margin: auto;
   text-align: center;
   background-color: #ffffff;
+  font-size: 100px;
 }
 
 .login {
@@ -34,7 +35,7 @@ table,th,td,tr{
   border-style: solid;
   border-width: 1px;
   border-color: black;
-  font-size: 100px;
+
 }
 
 .textbox{
