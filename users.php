@@ -45,6 +45,7 @@ $conn->close();
             <th>User ID</th>
             <th>username</th>
             <th>password hash</th>
+            <th>Actions</th>
           </tr>
 <?php
   //loop through all table records
