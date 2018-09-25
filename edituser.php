@@ -31,13 +31,14 @@ if ($_POST['password'] != null) {
     require('dbconnect.php');
 
     //assign user inputs to variables
-    //$password = $_POST['password'];
+    $password = $_POST['password'];
+    $userid = $row['userid'];
 
     //encrypt the new password
-    //$password = password_hash($password, PASSWORD_BCRYPT);
+    $password = password_hash($password, PASSWORD_BCRYPT);
       //add entry into database
-      //$sql = "UPDATE users SET username = '$password'";
-      //$conn->query($sql);
+      $sql = "UPDATE users SET username = '$password' WHERE userid = '$userid'";
+      $conn->query($sql);
   }
 }
 
