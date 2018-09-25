@@ -22,7 +22,8 @@ if (isset($_GET['id']) && $_GET['edit'] == "edit") {
   <input type="text" disabled value="<?php $row['userid'];?>"> <br>
   <input type="text" disabled value="<?php $row['username'];?>"> <br>
   <input type="text" disabled value="<?php $row['password'];?>"> <br>
-<?php
+</form>
+  <?php
   }
 }else {
   echo "Sorry, you should not be here.";
