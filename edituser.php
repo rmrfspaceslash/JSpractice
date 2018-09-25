@@ -16,8 +16,9 @@ if ($_POST['username'] != null) {
 
     //assign user inputs to variables
     $username = $_POST['username'];
+    $oldusername = $_SESSION['username'];
       //add entry into database
-      $sql = "UPDATE users SET username = '$username' WHERE username=$_SESSION['username']";
+      $sql = "UPDATE users SET username = '$username' WHERE username='$oldusername'";
       $conn->query($sql);
 
       //testing
@@ -30,13 +31,13 @@ if ($_POST['password'] != null) {
     require('dbconnect.php');
 
     //assign user inputs to variables
-    $password = $_POST['password'];
+    //$password = $_POST['password'];
 
     //encrypt the new password
-    $password = password_hash($password, PASSWORD_BCRYPT);
+    //$password = password_hash($password, PASSWORD_BCRYPT);
       //add entry into database
-      $sql = "UPDATE users SET username = '$password'";
-      $conn->query($sql);
+      //$sql = "UPDATE users SET username = '$password'";
+      //$conn->query($sql);
   }
 }
 
