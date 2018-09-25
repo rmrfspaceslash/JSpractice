@@ -17,7 +17,7 @@ if ($_POST['username'] != null) {
     //assign user inputs to variables
     $username = $_POST['username'];
       //add entry into database
-      $sql = "UPDATE users username = '$username'";
+      $sql = "UPDATE users SET username = '$username' WHERE username=''";
       $conn->query($sql);
 
       //testing
@@ -35,7 +35,7 @@ if ($_POST['password'] != null) {
     //encrypt the new password
     $password = password_hash($password, PASSWORD_BCRYPT);
       //add entry into database
-      $sql = "UPDATE users username = '$password'";
+      $sql = "UPDATE users SET username = '$password'";
       $conn->query($sql);
   }
 }
