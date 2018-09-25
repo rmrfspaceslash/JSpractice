@@ -35,7 +35,7 @@ if ($_POST['password'] != null) {
     //encrypt the new password
     $password = password_hash($password, PASSWORD_BCRYPT);
       //add entry into database
-      $sql = "INSERT INTO users (password) VALUES ('$password')";
+      $sql = "UPDATE users username = '$password'";
       $conn->query($sql);
   }
 }
