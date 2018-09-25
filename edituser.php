@@ -32,12 +32,12 @@ if ($_POST['password'] != null) {
 
     //assign user inputs to variables
     $password = $_POST['password'];
-    $userid = $row['userid'];
+    $oldusername = $_SESSION['username'];
 
     //encrypt the new password
     $password = password_hash($password, PASSWORD_BCRYPT);
       //add entry into database
-      $sql = "UPDATE users SET username = '$password' WHERE userid = '$userid'";
+      $sql = "UPDATE users SET password = '$password' WHERE username = '$oldusername'";
       $conn->query($sql);
   }
 }
