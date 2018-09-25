@@ -9,25 +9,13 @@ if (!isset($_SESSION)) {
 if (!isset($_SESSION['username'])) {
   header("Location: index.php");
 }
-
-if ($_POST['userid'] != null) {
-  if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-
-    //assign user inputs to variables
-    $username = $_POST['userid'];
-      //add entry into database
-      $sql = "INSERT INTO users (username,password) VALUES ('$username','$password')";
-      $conn->query($sql);
-  }
-
-}
 if ($_POST['username'] != null) {
   if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     //assign user inputs to variables
-    $username = $_POST['userid'];
+    $username = $_POST['username'];
       //add entry into database
-      $sql = "INSERT INTO users (username,password) VALUES ('$username','$password')";
+      $sql = "INSERT INTO users (username) VALUES ('$username')";
       $conn->query($sql);
   }
 
@@ -36,9 +24,11 @@ if ($_POST['password'] != null) {
   if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     //assign user inputs to variables
-    $username = $_POST['userid'];
+    $password = $_POST['password'];
+
+    $password = password_hash($password, PASSWORD_BCRYPT);
       //add entry into database
-      $sql = "INSERT INTO users (username,password) VALUES ('$username','$password')";
+      $sql = "INSERT INTO users (password) VALUES ('$password')";
       $conn->query($sql);
   }
 
