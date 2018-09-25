@@ -17,6 +17,8 @@ if ($_POST['username'] != null) {
       //add entry into database
       $sql = "INSERT INTO users (username) VALUES ('$username')";
       $conn->query($sql);
+
+      $_GET['edit'] = "edit";
   }
 
 }
