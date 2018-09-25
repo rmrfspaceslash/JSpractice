@@ -19,7 +19,7 @@ if (isset($_GET['id']) && $_GET['edit'] == "edit") {
 <?php
   while ($row = $result->fetch_assoc()) {
 ?>
-  <input type="text" disabled value="<?php $row['id'];?>">
+  <input type="text" value="<?php $row['userid'];?>">
 <?php
   }
 }else {
