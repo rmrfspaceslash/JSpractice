@@ -56,7 +56,7 @@ $conn->close();
       echo "<td>".$row['password']."</td>";
       echo "<td>Delete</td>";
       echo "<td>
-        <form action='edit.php' method='get'>
+        <form action='edituser.php' method='get'>
           <input type='hidden' value='".$row['userid']."' name='id'>
           <input type='submit' value='edit' name='edit'>
         </form>
