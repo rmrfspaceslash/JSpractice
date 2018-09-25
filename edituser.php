@@ -19,12 +19,15 @@ if (isset($_GET['id']) && $_GET['edit'] == "edit") {
 <?php
   while ($row = $result->fetch_assoc()) {
 ?>
-  <input type="text" disabled value="<?php echo $row['userid'];?>"> <br>
-  <input type="text" disabled value="<?php echo $row['username'];?>"> <br>
-  <input type="text" disabled value="<?php echo $row['password'];?>"> <br>
-</form>
-  <?php
+  <input name="userid" type="text" disabled value="<?php echo $row['userid'];?>"> <br>
+  <input name="username" type="text" disabled value="<?php echo $row['username'];?>"> <br>
+  <input name="password" type="text" disabled value="<?php echo $row['password'];?>"> <br>
+  <input name="submit" type="submit" value="change">
+<?php
   }
+?>
+</form>
+<?php
 }else {
   echo "Sorry, you should not be here.";
 }
