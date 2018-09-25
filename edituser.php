@@ -17,7 +17,7 @@ if ($_POST['username'] != null) {
     //assign user inputs to variables
     $username = $_POST['username'];
       //add entry into database
-      $sql = "INSERT INTO users (username) VALUES ('$username')";
+      $sql = "UPDATE users username = '$username'";
       $conn->query($sql);
 
       //testing
