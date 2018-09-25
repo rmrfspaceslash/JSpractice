@@ -12,6 +12,7 @@ if (!isset($_SESSION['username'])) {
 //check if user changed the username text box
 if ($_POST['username'] != null) {
   if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    require('dbconnect.php');
 
     //assign user inputs to variables
     $username = $_POST['username'];
@@ -26,6 +27,7 @@ if ($_POST['username'] != null) {
 //Check if user changed password text box
 if ($_POST['password'] != null) {
   if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    require('dbconnect.php');
 
     //assign user inputs to variables
     $password = $_POST['password'];
