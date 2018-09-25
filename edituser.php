@@ -22,7 +22,7 @@ if ($_POST['username'] != null) {
       $conn->query($sql);
 
       //testing
-      $_GET['edit'] = "edit";
+      header("Location: users.php");
   }
 }
 //Check if user changed password text box
