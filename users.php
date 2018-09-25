@@ -45,7 +45,6 @@ $conn->close();
             <th>User ID</th>
             <th>username</th>
             <th>password hash</th>
-            <th>Actions</th>
           </tr>
 <?php
   //loop through all table records
@@ -54,7 +53,6 @@ $conn->close();
       echo "<td>".$row['userid']."</td>";
       echo "<td>".$row['username']."</td>";
       echo "<td>".$row['password']."</td>";
-      echo "<td>Delete</td>";
       echo "<td>
         <form action='edituser.php' method='get'>
           <input type='hidden' value='".$row['userid']."' name='id'>
