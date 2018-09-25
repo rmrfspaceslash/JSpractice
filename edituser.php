@@ -9,6 +9,7 @@ if (!isset($_SESSION)) {
 if (!isset($_SESSION['username'])) {
   header("Location: index.php");
 }
+//check if user changed the username text box
 if ($_POST['username'] != null) {
   if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
@@ -18,22 +19,23 @@ if ($_POST['username'] != null) {
       $sql = "INSERT INTO users (username) VALUES ('$username')";
       $conn->query($sql);
 
+      //testing
       $_GET['edit'] = "edit";
   }
-
 }
+//Check if user changed password text box
 if ($_POST['password'] != null) {
   if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     //assign user inputs to variables
     $password = $_POST['password'];
 
+    //encrypt the new password
     $password = password_hash($password, PASSWORD_BCRYPT);
       //add entry into database
       $sql = "INSERT INTO users (password) VALUES ('$password')";
       $conn->query($sql);
   }
-
 }
 
 if (isset($_GET['id']) && $_GET['edit'] == "edit") {
