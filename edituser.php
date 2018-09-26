@@ -21,12 +21,12 @@ if (isset($_GET['id']) && $_GET['edit'] == "edit") {
   while ($row = $result->fetch_assoc()) {
 ?>
   <input name="userid" type="text" disabled value="<?php echo $row['userid'];?>"> <br>
-  <input name="username" type="text" value="<?php echo $row['username'];?>"> <br>
-  <input name="password" type="text" value="<?php echo $row['password'];?>"> <br>
+  <input name="username" type="text" placeholder="<?php echo $row['username'];?>"> <br>
+  <input name="password" type="text" placeholder="<?php echo $row['password'];?>"> <br>
   <input name="submit" type="submit" value="change">
 
 <?php
-    $oldusername = $row['userid'];
+    $olduserid = $row['userid'];
   }
 ?>
 </form>
@@ -43,7 +43,7 @@ if ($_POST['username'] != null) {
     //assign user inputs to variables
     $username = $_POST['username'];
       //add entry into database
-      $sql = "UPDATE users SET username = '$username' WHERE userid='$oldusername'";
+      $sql = "UPDATE users SET username = '$username' WHERE userid='$olduserid'";
       $conn->query($sql);
 
       //testing
@@ -61,8 +61,11 @@ if ($_POST['password'] != null) {
     //encrypt the new password
     $password = password_hash($password, PASSWORD_BCRYPT);
       //add entry into database
-      $sql = "UPDATE users SET password = '$password' WHERE userid = '$oldusername'";
+      $sql = "UPDATE users SET password = '$password' WHERE userid = '$olduserid'";
       $conn->query($sql);
+
+      //testing
+      header('Location: users.php');
   }
 }
 ?>
