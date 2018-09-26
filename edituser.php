@@ -41,6 +41,8 @@ if ($_POST['username'] != null) {
     //assign user inputs to variables
     $username = $_POST['username'];
     $oldusername = $row['userid'];
+    echo $oldusername;
+    die();
       //add entry into database
       $sql = "UPDATE users SET username = '$username' WHERE username='$oldusername'";
       $conn->query($sql);
