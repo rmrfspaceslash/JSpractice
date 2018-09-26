@@ -9,38 +9,7 @@ if (!isset($_SESSION)) {
 if (!isset($_SESSION['username'])) {
   header("Location: index.php");
 }
-//check if user changed the username text box
-if ($_POST['username'] != null) {
-  if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    require('dbconnect.php');
 
-    //assign user inputs to variables
-    $username = $_POST['username'];
-    $oldusername = $_SESSION['username'];
-      //add entry into database
-      $sql = "UPDATE users SET username = '$username' WHERE username='$oldusername'";
-      $conn->query($sql);
-
-      //testing
-      header("Location: users.php");
-  }
-}
-//Check if user changed password text box
-if ($_POST['password'] != null) {
-  if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    require('dbconnect.php');
-
-    //assign user inputs to variables
-    $password = $_POST['password'];
-    $oldusername = $_SESSION['username'];
-
-    //encrypt the new password
-    $password = password_hash($password, PASSWORD_BCRYPT);
-      //add entry into database
-      $sql = "UPDATE users SET password = '$password' WHERE username = '$oldusername'";
-      $conn->query($sql);
-  }
-}
 
 if (isset($_GET['id']) && $_GET['edit'] == "edit") {
   require('dbconnect.php');
@@ -62,5 +31,38 @@ if (isset($_GET['id']) && $_GET['edit'] == "edit") {
 <?php
 }else {
   echo "Sorry, you should not be here.";
+}
+
+//check if user changed the username text box
+if ($_POST['username'] != null) {
+  if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    require('dbconnect.php');
+
+    //assign user inputs to variables
+    $username = $_POST['username'];
+    $oldusername = $row['userid'];
+      //add entry into database
+      $sql = "UPDATE users SET username = '$username' WHERE username='$oldusername'";
+      $conn->query($sql);
+
+      //testing
+      header("Location: users.php");
+  }
+}
+//Check if user changed password text box
+if ($_POST['password'] != null) {
+  if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    require('dbconnect.php');
+
+    //assign user inputs to variables
+    $password = $_POST['password'];
+    $oldusername = $row['userid']
+
+    //encrypt the new password
+    $password = password_hash($password, PASSWORD_BCRYPT);
+      //add entry into database
+      $sql = "UPDATE users SET password = '$password' WHERE username = '$oldusername'";
+      $conn->query($sql);
+  }
 }
 ?>
