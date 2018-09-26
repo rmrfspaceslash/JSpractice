@@ -56,7 +56,7 @@ if ($_POST['password'] != null) {
 
     //assign user inputs to variables
     $password = $_POST['password'];
-    $oldusername = $row['userid']
+    $oldusername = $row['userid'];
 
     //encrypt the new password
     $password = password_hash($password, PASSWORD_BCRYPT);
