@@ -24,7 +24,9 @@ if (isset($_GET['id']) && $_GET['edit'] == "edit") {
   <input name="username" type="text" value="<?php echo $row['username'];?>"> <br>
   <input name="password" type="text" value="<?php echo $row['password'];?>"> <br>
   <input name="submit" type="submit" value="change">
+
 <?php
+    $oldusername = $row['userid'];
   }
 ?>
 </form>
@@ -40,9 +42,6 @@ if ($_POST['username'] != null) {
 
     //assign user inputs to variables
     $username = $_POST['username'];
-    $oldusername = $row['userid'];
-    echo $oldusername;
-    die();
       //add entry into database
       $sql = "UPDATE users SET username = '$username' WHERE username='$oldusername'";
       $conn->query($sql);
@@ -58,7 +57,6 @@ if ($_POST['password'] != null) {
 
     //assign user inputs to variables
     $password = $_POST['password'];
-    $oldusername = $row['userid'];
 
     //encrypt the new password
     $password = password_hash($password, PASSWORD_BCRYPT);
