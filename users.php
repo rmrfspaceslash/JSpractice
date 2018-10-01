@@ -70,6 +70,10 @@ $conn->close();
     echo "</tr>";
   }
 ?>
+          <form action="" method="post">
+            <input class="buttons" type="submit" name="users" value="Users">
+            <?php if ($_POST['users'] != null) {header("Location: home.php"); }?>
+          </form>
         </table>
     </div>
    </body>
