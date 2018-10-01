@@ -71,7 +71,7 @@ $conn->close();
   }
 ?>
           <form action="" method="post">
-            <input class="buttons" type="submit" name="users" value="Users">
+            <input class="buttons" type="submit" name="users" value="Home">
             <?php if ($_POST['users'] != null) {header("Location: home.php"); }?>
           </form>
         </table>
