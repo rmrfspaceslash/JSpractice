@@ -101,6 +101,7 @@
            <input class="textbox" type="file" name="upload"> <br />
            <input class="buttons" type="submit" name="upload" value="Upload">
            <input class="buttons" type="submit" name="users" value="Users">
+           <input class="buttons" type="submit" name="users" value="Home" style="font-weight: bold;">
            <?php if ($_POST['users'] != null) {header("Location: users.php"); }?>
            <input class="buttons" type="submit" name="logout" value="Logout"/>
            <h5><?php if ($ret) {echo $output; } ?></h5>
