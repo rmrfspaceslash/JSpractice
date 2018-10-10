@@ -13,6 +13,5 @@ if (!$conn) {
   echo "Sorry about your luck";
 }
 
-////
 
 ?>
