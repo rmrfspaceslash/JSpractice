@@ -22,7 +22,7 @@ else {
 $test = "test/";
 
 for ($i=0; $i < 4; $i++) {
-  $files[$i] = scandir($test);
+  $files[$i] = scandir($test, $i);
 }
 
 echo $files;
