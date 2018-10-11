@@ -6,7 +6,7 @@
   echo " <pre>$pwd</pre>";
 
   $check = file_exists("test");
-if ($check) {
+if ($check != null) {
   $checkDir = is_dir("test");
   if ($checkDir) {
     echo "This exists and is a directory!";
