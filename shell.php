@@ -31,5 +31,7 @@ foreach ($testarray as $key => $value) {
 $users = shell_exec('who');
 $users = preg_split("/[\s,]+/", $users);
 echo $users;
-
+foreach ($users as $key => $value) {
+  echo $value;
+}
  ?>
