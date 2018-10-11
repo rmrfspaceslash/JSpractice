@@ -28,7 +28,7 @@ foreach ($testarray as $key => $value) {
   echo $value . "<br/>";
 }
 
-$users = shell_exec("who");
+$users = shell_exec('who');
 $users = preg_split("/[\s,]+/", $users);
 
 
