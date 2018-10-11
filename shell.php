@@ -1,6 +1,6 @@
 <?php
   $output = shell_exec('ls -lah');
-  echo $output;
+  echo "<pre>$output</pre>";
 
   $pwd = shell_exec('pwd');
   echo " <pre>$pwd</pre>";
@@ -20,10 +20,12 @@ else {
 }
 
 $test = "test/";
-
-for ($i=0; $i < 4; $i++) {
-  $files[$i] = scandir($test, $i);
-  echo $files[$i];
+$testarray = scandir($test);
+foreach ($testarray as $key => $value) {
+  if ($value == "." || $value == "..") {
+    continue;
+  }
+  echo $value . "<br/>";
 }
 
 
