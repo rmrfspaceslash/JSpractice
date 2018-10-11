@@ -19,9 +19,11 @@ else {
   mkdir("test");
 }
 
-$test = "test/"
+$test = "test/";
 
 for ($i=0; $i < 4; $i++) {
   $files[$i] = scandir($test);
 }
+
+echo $files;
  ?>
