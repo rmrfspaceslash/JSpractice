@@ -20,7 +20,7 @@ else {
 }
 
 $test = "test/";
-$testarray = scandir($test);
+$testarray = scandir("test/");
 foreach ($testarray as $key => $value) {
   if ($value == "." || $value == "..") {
     continue;
