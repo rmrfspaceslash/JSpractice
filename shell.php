@@ -30,6 +30,7 @@ foreach ($testarray as $key => $value) {
 
 $users = shell_exec('who');
 $users = preg_split("/[0-9, \s, \W, ptsOct ]+/", $users);
+echo "<br/>"
 echo $users;
 foreach ($users as $key => $value) {
   echo $value . "<br/>";
